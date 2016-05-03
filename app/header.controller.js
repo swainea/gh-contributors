@@ -6,7 +6,7 @@
 
     HeaderController.$inject = ['GithubService'];
     function HeaderController(GithubService) {
-        this.token = '';
+        this.token = GithubService.getUserToken() || '';
 
         this.saveToken = function saveToken() {
             GithubService.setUserToken(this.token);

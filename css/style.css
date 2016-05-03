@@ -1,0 +1,14 @@
+.gh-addressbook ul {
+    margin: 0;
+    padding: 0;
+}
+.gh-addressbook li {
+    list-style: none;
+    width: 13em;
+    height: 9em;
+    border: 1px solid #666;
+    border-radius: 0.2em;
+    display: block;
+    float: left;
+    margin: 0.3em;
+}

@@ -6,15 +6,21 @@
 
     GithubService.$inject = ['$http', '$q'];
     function GithubService($http, $q) {
-        var _token = null;
+        var _token = localStorage.getItem('gh-token') || null;
 
         return {
             setUserToken: setUserToken,
+            getUserToken: getUserToken,
             getCommitters: getCommitters
         };
 
         function setUserToken(token) {
             _token = token;
+            localStorage.setItem('gh-token', token);
+        }
+
+        function getUserToken() {
+            return _token;
         }
 
         function getCommitters(repoName) {
