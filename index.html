@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang='en' ng-app='gh'>
+    <head>
+        <meta charset='utf-8'>
+        <title>GH Address Book - Week 9 Day 2</title>
+
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no'>
+    </head>
+    <body>
+        <main>
+            <header ng-controller='HeaderController as header'>
+                <h1>GH Address Book</h1>
+                <form ng-submit='header.saveToken()'>
+                    <input type='text' placeholder='GitHub token' ng-model='header.token'>
+                    <input type='submit' value='Save'>
+                </form>
+            </header>
+
+            <section class='page-content' ui-view></section>
+        </main>
+
+        <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular.min.js'></script>
+        <script src='http://angular-ui.github.io/ui-router/release/angular-ui-router.js'></script>
+
+        <script src='app/gh.module.js'></script>
+        <script src='users/address-book.controller.js'></script>
+        <script src='users/github.service.js'></script>
+        <script src='app/header.controller.js'></script>
+
+    </body>
+</html>
