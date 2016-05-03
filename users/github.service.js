@@ -38,7 +38,14 @@
                 var dupCheck = [];
                 response.data.forEach(function loopCommits(commit) {
                     if (commit.author && dupCheck.indexOf(commit.author.login) < 0) {
-                        authors.push(commit.author);
+                        authors.push({
+                            id: commit.author.id,
+                            login: commit.author.login,
+                            name: commit.commit.author.name,
+                            email: commit.commit.author.email,
+                            avatar: commit.author.avatar_url,
+                            url: commit.author.html_url
+                        });
                         dupCheck.push(commit.author.login);
                     }
                 });
