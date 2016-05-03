@@ -10,10 +10,19 @@
 }
 
 .gh-user {
+    font-size: 1em;
+    font-family: helvetica;  
+    color: #727272;
     margin: 0;
     padding: 0.2em;
-    width: 13em;
-    height: 9em;
-    border: 1px solid #666;
+    width: 18em;
+    border: 1px solid #d9d6d6;
     border-radius: 0.2em;
+    background-color: #e4e0e0;
+}
+
+img{
+  height: 100px;
+  width: 100px;
+  border-radius: 0.2em;
 }
