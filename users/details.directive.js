@@ -7,7 +7,7 @@
 
   function GhDetails (){
     return{
-      restrict: 'EA',
+      restrict: 'A',
       templateUrl: "users/details.template.html",
       scope: {
         users: "=info"
